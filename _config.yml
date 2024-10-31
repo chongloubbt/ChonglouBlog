@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
+title: 重楼
+subtitle: 重楼的博客
+description: 重楼的小站,分享一些技术知识点和实战经验
+keywords: 重楼,重楼的博客,重楼的小站
+author: 重楼
+language: zh-CN
 timezone: ''
 
 # URL
@@ -96,7 +96,9 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+# theme: landscape
+# theme: ayer
+theme: geektutu
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

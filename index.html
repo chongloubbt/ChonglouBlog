@@ -138,13 +138,35 @@
                 
                 
             </div>
-            <a href="/ChonglouBlog/2024/10/31/hello-world/" class="title">
-                Hello World
+            <a href="/ChonglouBlog/2024/11/09/CMake语法规则/" class="title">
+                CMake语法规则
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2024-10-31，</span>
-                    <span class="hidden-xs">全文838字，</span>
+                    <span>发表于2024-11-09，</span>
+                    <span class="hidden-xs">全文562字，</span>
+                    <span>阅读约2分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="post-preview">
+    <div class="post-img" style="background-image: url('/ChonglouBlog/')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+            </div>
+            <a href="/ChonglouBlog/2024/11/09/CMake介绍/" class="title">
+                CMake介绍
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2024-11-09，</span>
+                    <span class="hidden-xs">全文606字，</span>
                     <span>阅读约3分钟</span>
                 </small>
             </p>
@@ -219,7 +241,7 @@
 <div class="gkt-summary">
     <nav>
         <a href="/ChonglouBlog/" class="col-xs-4">
-            <span class="number">1</span><span>文章</span>
+            <span class="number">2</span><span>文章</span>
         </a>
         <a href="/ChonglouBlog/series" class="col-xs-4 middle">
             <span class="number">0</span><span>专题</span>
@@ -411,10 +433,23 @@
         </small>
     </p>
     
+    <p>
+        <small>
+            <span id="busuanzi_container_site_pv">👁<span id="busuanzi_value_site_pv"></span></span> &nbsp;
+            <span id="busuanzi_container_page_pv">📚<span id="busuanzi_value_page_pv"></span></span>
+        </small>
+    </p>
+    
     
 
 </footer>
 
+
+<script>
+    window.addEventListener('load', function () {
+        globalAddScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js');
+    })
+</script>
 
 <!-- Baidu Tongji -->
 
@@ -441,6 +476,46 @@
         })();
     </script>
     
+<script>
+    (function (window, document, undefined) {
+        var hearts = [];
+        var keywords = ["点个赞", "留个言", "赞赏一下", "重楼", "ChonglouBlog"];
+        function randomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+        window.addEventListener('click', createWord)
+
+        function createWord(e) {
+            var d = document.createElement("span");
+            d.style.position = 'fixed';
+            d.style.zIndex = 9999;
+            d.style.color = 'rgb(' + [randomInt(255), randomInt(255), randomInt(255)].join(',') + ')';
+            d.innerHTML = keywords[randomInt(keywords.length)];
+            d.onselectstart = function () { return false; }
+
+            hearts.push({ el: d, x: e.clientX - 5, y: e.clientY - 5, alpha: 1, scale: 1 });
+            document.body.appendChild(d);
+        }
+        (function gameloop() {
+            for (var i = 0; i < hearts.length; i++) {
+                heart = hearts[i];
+                if (heart.alpha <= 0) {
+                    document.body.removeChild(heart.el);
+                    hearts.splice(i, 1);
+                    continue;
+                }
+                heart.y -= heart.alpha < 0.5 ? 2 : 1;
+                heart.scale += 0.002;
+                heart.alpha -= 0.013;
+                heart.el.style.transform = 'scale(' + heart.scale + ')';
+                heart.el.style.left = heart.x + 'px';
+                heart.el.style.top = heart.y + 'px';
+            }
+            setTimeout(gameloop, 10)
+        })();
+    })(window, document);
+</script>
+
 </body>
 
 </html>

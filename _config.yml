@@ -13,7 +13,9 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+# url: http://example.com
+url: https://chongloubbt.github.io/ChonglouBlog
+root: /ChonglouBlog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -93,6 +95,7 @@ include:
 exclude:
 ignore:
 
+header_icon: img/icon.png
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -100,9 +103,23 @@ ignore:
 # theme: ayer
 theme: geektutu
 
+# 导航菜单
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /tags
+  About: /about
+
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
   repository: https://github.com/chongloubbt/ChonglouBlog.git
   branch: deploy
+
+widgets:
+  mobile_qrcode: false # 开启移动端二维码，扫一扫，手机上阅读
+  caidan: true  # 开启彩蛋，点击屏幕会随机弹出 '点个赞','留个言'等
+  busuanzi: true # 开启不蒜子统计 https://busuanzi.ibruce.info/
+  
